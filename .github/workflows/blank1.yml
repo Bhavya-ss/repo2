@@ -16,6 +16,6 @@ jobs:
       if: failure()
       with:
         project: CSV test
-        issuetype: Build
+        issuetype: Story
         summary: Build failed for ${{ github.repository }}
 
