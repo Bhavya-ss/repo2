@@ -5,16 +5,16 @@ jobs:
     - name: Failing step
       run: exit 1
     - name: Login to Jira
-      uses: atlassian/gajira-login@master
+      uses: https://b222.atlassian.net
       if: failure()
       env:
-        JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
-        JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+        JIRA_BASE_URL: ${{ secrets.https://b222.atlassian.net }}
+        JIRA_USER_EMAIL: ${{ secrets.bhavyashrees@devtools.in }}
+        JIRA_API_TOKEN: ${{ secrets.ATCTT3xFfGN09III7CR2sliWKHYHUMlMZyO-EV4AFdjKVsXECcspuDmigLRT9Ub4_O3fmbA07a7LnQqC6S0YwDYNd5L8Rbtt5NHFxgfLaNCzZgcj-rBcSyCm-BPgzKsLpaE6ERdfwMVDeAYu0GX89T2exGVA2N2piMFaWj9F-WN1Kz3GXE6xO-Y=B7AC2388 }}
     - name: Create Jira issue on job failure
-      uses: atlassian/gajira-create@master
+      uses:  https://b222.atlassian.net
       if: failure()
       with:
-        project: GA
+        project: CSV test
         issuetype: Build
         summary: Build failed for ${{ github.repository }}
